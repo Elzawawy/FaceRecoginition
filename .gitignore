@@ -2,4 +2,5 @@
 cifar-10-python.tar.gz
 data_batch_1
 __pycache__
+.ipynb_checkpoints
 
