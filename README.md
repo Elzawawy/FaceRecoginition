@@ -24,12 +24,10 @@ between them.
 
 ### Algorithm
 
-PCA algorithm steps and procedure is provided in Figure 1 which is taken from
-[1] from Chapter 7.
+PCA algorithm steps and procedure is provided in Figure 1 which is taken from [1] from Chapter 7.
 
-```
-Figure 1: PCA Algorithm
-```
+![PCA Algorithm](Figures/pca.png)
+
 PCA is mathematically defined as an orthogonal linear transformation that
 transforms the data to a new coordinate system such that the greatest variance
 by some projection of the data comes to lie on the first coordinate (called the first
@@ -63,12 +61,8 @@ when alpha is set to 0.95 as it is over-fits. So, we can deduce the best alpha
 value here is 0.8, which achieves very good accuracy with no or little redundant
 dimensions in the subspace.
 
-```
-Figure 2:αvs.r
-```
-```
-Figure 3:αvs.accuracy
-```
+![](Figures/note1.png)
+![](Figures/note2.png)
 ### Visualization of EigenFaces
 
 The aim of this section is to better grasp the concept of Eigenfaces in action
@@ -89,30 +83,21 @@ different splits in two different files ( 50-50 splits and 70-30 splits). The me
 face is the face that resembles roughly most of the dataset faces features, the
 mean face of the train set, in case of 50-50 is shown in Figure 5.
 
-```
-Figure 4: The ATT face database (formerly the ORL database) preview.
-```
-```
-Figure 5: The Mean Face
-```
-```
+![](Figures/note4.png)
+![](Figures/note3.png)
+
 Then, we completed the procedure as explained in 2.2 and the Eigenfaces
-```
 
 produced as those shown in Figure 6.
 Finally, to complete the purpose of this section, we show the reconstruction of
 a sample face via the Eigenfaces obtained. Figure 7(a) shows the original face
 while 7(b) shows the reconstructed one.
 
-```
-Figure 6: The Eigenfaces corresponding to the largest 25 Eigenvectors
-```
-```
-(a) Original Face (b) Reconstructed Face
-```
-```
-Figure 7: Reconstruction of faces using Eigenfaces
-```
+![](Figures/note5.png)
+![](Figures/org.png)
+
+![](Figures/reconstuct.png)
+
 So, to summarize our work in the first approach, Eigenfaces along with a
 simple KNN Classifier did a very good job in faces classification as well as face
 reconstruction experiment conducted on a sample test face.
@@ -139,9 +124,8 @@ dimensionality while class separation in mind.
 LDA algorithm steps and procedure is provided in Figure 8 which is taken from
 [1] from Chapter 20.
 
-```
-Figure 8: LDA Algorithm
-```
+![](Figures/lda.png)
+
 As the algorithm lists, the steps involved in the algorithm is as follows. Step
 one, compute d-dimensional mean vectors for different classes from the dataset,
 where d is the dimension of feature space.Step two, compute in-between class
@@ -172,12 +156,9 @@ eigenvalues of generalized eigenvalue problem.
 The main resulting matrices of the implementation is shown in figures below,
 more can be found in the source code though.
 
-```
-Figure 9: Result 1, Within-scatter and Between-scatter matrices
-```
-```
-Figure 10: Result 2, Projection Matrix
-```
+![](Figures/ldaresult.png)
+![](Figures/ldaresult3.png)
+
 Finally, we note the KNN classifier scores using LDA on (50-50) and (70-30)
 splits were 0.55 and 0.64 respectively.
 
@@ -196,9 +177,8 @@ needed for classification.
 Lastly, LDA will fail when the discriminatory information is not in the mean
 but rather in the variance of the data.
 
-```
-Figure 11: Example of Discriminatory information being in variance.
-```
+![](Figures/show.png)
+
 In any of these cases do occur, you can consider other variants of LDA that
 solve some of those limitations mentioned above such as Non-parametric LDA,
 Orthonormal LDA , Generalized LDA and Multilayer perceptrons. Moreover,
@@ -226,9 +206,8 @@ data. PCA on the other hand does not take into account any difference in class,
 and factor analysis builds the feature combinations based on differences rather
 than similarities.
 
-```
-Figure 12: PCA vs LDA in 2D Projection
-```
+![](Figures/ldavspca.png)
+
 Both Linear Discriminant Analysis (LDA) and Principal Component Anal-
 ysis (PCA) are linear transformation techniques that are commonly used for di-
 mensionality reduction. PCA can be described as an “unsupervised” algorithm,
@@ -287,7 +266,4 @@ jection” by Peter N. Belhumeur, Joao P. Hespanha, and David J. Kriegman
 [7]FACE RECOGNITION USING PCA, LDA AND VARIOUS DISTANCE
 CLASSIFIERS
 
-```
-No further Information,End of Report
-```
 
